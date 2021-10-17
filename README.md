@@ -13,12 +13,41 @@ SuperMeta is a dapp that helps developers and owners to view and work with NFT m
 
 ## User Stories 
 
-As a user, I want to mint a new NFT that represents the combined meta data from one or more of my NFTs.
+As a user, I want to view the metadata for two source NFTs so that I can choose the metadata fields to include in a new destination NFT.
+
+As a user, I want to select metadata from two source NFTs so that I can create a destination NFT that includes metadata from the source NFTs.
+
+As a user, I want to mint a new NFT that includes selected meta data the source NFTs.
+
+As a user, I want to see the the new NFT metadata so that I can confirm that the metadata includes the metadata selected from the source NFTs.
+
+## Dapp Structure
+The final dapp should include the following screens: 
+- Show a user the NFTs in their wallet and allow them to select two source NFTs
+- A screen that displays the metadata of the specified NFTs side-by-side with the following capabilities:
+  - Allow a user to select one or more metadata fields from each source NFT for inclusion in a new destination NFT
+  - Allow a user to mint a new destination NFT that includes the selected metadata from each source NFT
+- A screen that shows the user the new destination NFT with combined metadata from the source NFTs
 
 ## Reserach Questions
-1. How is NFT meta data retrieved? 
-2. How can meta data indexed for an entire contract?
-3. What are the implications of minting a new NFT that represents the meta data from multiple underlying assets?
-4. How would this be perceived by a consuming dapp?
-5. What would happen if the owner sold an underlying asset? 
-6. Would the contract need to custody the underlying asset in order for the new NFT to be a useable source of meta data? 
+**How is NFT metadata retrieved?** 
+
+By parsing the JSON retrieved from the tokenUri property of the token contract. 
+
+**How can metadata be indexed for an entire contract?**
+
+A service like [Moralis](https://moralis.io/) can be used to index contract metadata without indexing an RPC node from scratch. This is the best route for a small project like this one. 
+
+**What are the implications of minting a new NFT that represents the meta data from multiple underlying assets?**
+
+If the user ownns the underlying asset, this should not present a technical issue. The source NFT contracts would not recognize the token as part of the origniating collection. Therfore, the destination NFT is derivitave but does not necessarily infringe on any intellectual property rights. This type of system certainly has implications on intellectual property ownership but, ultimately, is out of the system's control. 
+
+**How would this be perceived by a consuming dapp?**
+
+A third party contract would need to recognize the destination NFT in order for the token to have utility within a new contract. The destination NFT could be interpreted as a wholly new asset, disconnected from the source NFT. A developer could also choose to use the destination NFT's contract lineage as a factor in how the token is considered within the context of the third party contract. 
+
+**What would happen if the owner sold a source NFT?**
+There should be on impact on the destination NFT if the owner chooses to sell a source NFT. The destination NFT is an entirely new asset that is linked to the user's historically provable ownership of the source NFT. 
+
+**Would the contract need to custody the underlying asset in order for the new NFT to be a useable source of metadata?**
+The SuperMeta contract does not require custody of any tokens. It merely reads ownershp of the tokens in the user's wallet and presents them with an interface for selecting source NFT metadata that should be mapped to a destination NFT. 
