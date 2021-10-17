@@ -4,7 +4,6 @@
 NFTs introduce a new opportunity for asset owners to transport their NFTs across the metaverse in order to extract new utility from their digital items. This could look as as simple as using an NFT in a new experience - e.g., transporting a digitally owned piece of clothing from one virtual reality experience to another. This could also be a matter of combining the meta data from two or more NFTs into a new item - e.g., combing a sword and shield into a more powerful weapon. 
 
 While we can't predict all of the use cases ahead of time, as NFT enthusiasts continue exploring new use cases, there will be a growing need to interpret NFT meta data in meaningful ways. 
-
 ## The Problem
 Currently, there are no standards for structuring NFT meta data and it is up to developers to interpret or ignore this information. If NFTs are going to progress as composable assets there needs to be a way for owners and developers to create and interpret NFT meta data. 
 
@@ -28,6 +27,13 @@ The final dapp should include the following screens:
   - Allow a user to select one or more metadata fields from each source NFT for inclusion in a new destination NFT
   - Allow a user to mint a new destination NFT that includes the selected metadata from each source NFT
 - A screen that shows the user the new destination NFT with combined metadata from the source NFTs
+
+## Destination NFT Metadata Structure
+
+The structure of the destination metadata NFT should include the following elements: 
+- Source NFT A address
+- Source NFT B address
+- Metadata attributes selected from source NFT A and source NFT B
 
 ## Reserach Questions
 **How is NFT metadata retrieved?** 
