@@ -56,9 +56,27 @@ contract SuperMeta is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
      // Stub functions for functionality
 
-    function mintToken(address _to) public {
+    function mintToken(address _to) 
+        public 
+    {
 
-        // Mint a new token using metadata input from source NFTA and NFTB 
+        // Mint a new token and point to tokenURI that contains a mix of selected metadata from NFTA and NFTB 
 
+    }
+    function viewToken() 
+        public 
+        view 
+        returns (uint tokenId, address owner, string baseUri) 
+    {
+
+        // Looks up a token by ID and return the ID, owner and full token URI (concatenate baseURI + token ID)
+
+    }
+
+    function viewOwnerTokens(address owner)
+    public
+    view
+    {
+        // Look up the tokens owned by an address and return an array of tokenIds
     }
 }
