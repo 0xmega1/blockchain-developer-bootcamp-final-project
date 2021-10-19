@@ -40,8 +40,6 @@ The final dapp should include the following screens:
   - Allow a user to mint a new destination NFT that includes the selected metadata from each source NFT
 - A screen that shows the user the new destination NFT with combined metadata from the source NFTs
 
-[Dapp architecture diagram](https://www.awesomescreenshot.com/image/15165470?key=12549a2c929a78cffa08f3df1c4ff12c)
-
 ## Destination NFT Metadata Structure
 
 The structure of the destination metadata NFT should include the following elements: 
