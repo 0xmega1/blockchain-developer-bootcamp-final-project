@@ -18,7 +18,7 @@ contract SuperMeta is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         return "http://metadata.json";
     }
 
-    function safeMint(address to) public onlyOwner {
+    function safeMint(address to) public onlyOwner { // I think I want to remove onlyOwner - confirm
         _safeMint(to, _tokenIdCounter.current());
         _tokenIdCounter.increment();
     }
@@ -56,7 +56,7 @@ contract SuperMeta is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
      // Stub functions for functionality
 
-    function mintToken(string memory _attr1, string memory _attr2, address _to) public {
+    function mintToken(address _to) public {
 
         // Mint a new token using metadata input from source NFTA and NFTB 
 
