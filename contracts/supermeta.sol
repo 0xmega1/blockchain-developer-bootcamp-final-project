@@ -23,11 +23,6 @@ contract SuperMeta is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         _tokenIdCounter.increment();
     }
 
-    // Stub functions for functionality
-
-    // Mint a new token using metadata input from source NFTA and NFTB 
-
-
     // The following functions are overrides required by Solidity.
 
     function _beforeTokenTransfer(address from, address to, uint256 tokenId)
@@ -57,5 +52,13 @@ contract SuperMeta is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
+    }
+
+     // Stub functions for functionality
+
+    function mintToken(string memory _attr1, string memory _attr2, address _to) public {
+
+        // Mint a new token using metadata input from source NFTA and NFTB 
+
     }
 }
