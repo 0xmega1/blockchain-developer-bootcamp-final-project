@@ -1,0 +1,23 @@
+{
+  "name": "blockchain-developer-bootcamp-final-project",
+  "version": "1.0.0",
+  "description": "### Table of Contents   - [The Opportunity](#the-opportunity)   - [The Problem](#the-problem)   - [The Solution](#the-solution)   - [User Stories](#user-stories)   - [Dapp Structure](#dapp-structure)   - [Destination NFT Metadata Structure](#destination-nft-metadata-structure)   - [Smart Contract Specs](#smart-contract)   - [Reserach Questions](#reserach-questions)",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-dev:0xmega1/blockchain-developer-bootcamp-final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2",
+    "dotenv": "^10.0.0"
+  }
+}

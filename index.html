@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>    
+    <script>
+        $(document).ready(function(){
+            $('select').on('change', function(event ) {
+            //restore previously selected value
+            var prevValue = $(this).data('previous');
+            $('select').not(this).find('option[value="'+prevValue+'"]').show();
+            //hide option selected                
+            var value = $(this).val();
+            //update previously selected data
+            $(this).data('previous',value);
+            $('select').not(this).find('option[value="'+value+'"]').hide();
+        });
+        });
+    </script>
+
+
+    <title>SuperMeta</title>
+ </head>
+ <body>
+     
+    <div class="flex items-center justify-center w-screen py-4">
+        <h1 class="text-4xl">SuperMeta</h1>
+    </div>
+    <div class="flex items-center justify-center w-screen py-8">
+        
+
+        <!-- Component Start -->
+        <form class="grid gap-2 w-full max-w-screen-sm">
+            <div class="border-2 border-gray-400 py-4 px-4">
+                <label class="">
+                    <span class="text-xs font-semibold uppercase">Select NFT A</span>           
+                </label>
+                <select class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 mt-2 block w-full appearance-none leading-normal" id="grid-state" name="selectBox1" id="selectBox1">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+                <label class="">
+                    <span class="text-xs font-semibold uppercase">Select NFT B</span>           
+                </label>
+                <select class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 mt-2 block w-full appearance-none leading-normal" id="grid-state" name="selectBox2" id="selectBox2">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+        </form>
+        <!-- Component End  -->
+    
+    </div>
+ </body>
+</html>
+
